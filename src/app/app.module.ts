@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { UserSettingsFormComponent } from './user-subscribe-form/user-subscribe-form.component';
 import { UserListFormComponent } from './user-list-form/user-list-form.component';
+import { AdminNodeProvider } from './api/user.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { UserListFormComponent } from './user-list-form/user-list-form.component
       { path: 'cadastro', component: UserSettingsFormComponent, data: { pageName: 'Cadastro'}}
     ])
   ],
-  providers: [],
+  providers: [AdminNodeProvider],
   bootstrap: [AppComponent]
 })
 
