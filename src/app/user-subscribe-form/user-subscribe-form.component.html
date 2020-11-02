@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Cadastro</h2>
+
+  <form #form="ngForm">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" class="form-control" [(ngModel)]="userSettings.nome" />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" class="form-control" [(ngModel)]="userSettings.email">
+    </div>
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input id="idade" name="idade" class="form-control" [(ngModel)]="userSettings.idade">
+    </div>
+    <div class="form-group">
+      <label for="login">Login</label>
+      <input id="login" name="login" class="form-control" [(ngModel)]="userSettings.login">
+    </div>
+    <div class="form-group">
+      <label for="senha">Password</label>
+      <input type="password" name="senha" class="form-control" id="senha" [(ngModel)]="userSettings.senha">
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select class="form-control" id="status" name="status" [(ngModel)]="userSettings.status">
+        <option>Ativo</option>
+        <option>Inativo</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary">Enviar</button>
+  </form>
+
+</div>
+
+{{ userSettings | json }}
