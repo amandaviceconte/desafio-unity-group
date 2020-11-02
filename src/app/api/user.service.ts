@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';;
 import { Observable } from 'rxjs';
 
+import { AtributosUsuario } from '../data/atributos-usuario';
+
 @Injectable()
 export class AdminNodeProvider {
 
@@ -15,5 +17,9 @@ export class AdminNodeProvider {
 
   buscarUsuarioId(id: any): Observable<any> {
     return this.http.get(`${this.urlLocal}/usuarios/id/${id}`);
+  }
+
+  adicionarUsuario(usuario: AtributosUsuario): Observable<AtributosUsuario> {
+    return this.http.post<AtributosUsuario>(`${this.urlLocal}/usuarios`, usuario);
   }
 }

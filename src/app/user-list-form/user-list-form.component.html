@@ -1,1 +1,25 @@
-<p>user-list-form works!</p>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">Idade</th>
+      <th scope="col">Login</th>
+      <th scope="col">Senha</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let usuario of atributosUsuario; let i = index">
+      <th scope="row">{{i}}</th>
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.email}}</td>
+      <td>{{usuario.idade}}</td>
+      <td>{{usuario.login}}</td>
+      <td>{{usuario.senha}}</td>
+      <td>{{usuario.status}}</td>
+    </tr>
+  </tbody>
+</table>

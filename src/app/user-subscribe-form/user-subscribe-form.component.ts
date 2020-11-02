@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AtributosUsuario } from '../data/atributos-usuario';
+import { AdminNodeProvider } from '../api/user.service';
 
 @Component({
   selector: 'app-user-subscribe-form',
@@ -10,7 +11,6 @@ import { AtributosUsuario } from '../data/atributos-usuario';
 export class UserSettingsFormComponent implements OnInit {
 
   atributosUsuarioOriginal: AtributosUsuario = {
-    id: null,
     nome: null,
     email: null,
     idade: null,
@@ -23,9 +23,20 @@ export class UserSettingsFormComponent implements OnInit {
 
   atributosUsuario: AtributosUsuario = { ...this.atributosUsuarioOriginal };
 
-  constructor() { }
+  constructor(
+    private adminNodeProvider: AdminNodeProvider
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    console.log('Submitado');
+    // this.adminNodeProvider.adicionarUsuario(this.atributosUsuario).subscribe(res => {
+      
+    // }), (err) => {
+    //   console.log('ERRO ao adicionar usuário: ', err);
+    // }
   }
 
 }

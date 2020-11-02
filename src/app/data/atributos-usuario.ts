@@ -1,5 +1,5 @@
 export interface AtributosUsuario {
-    id: number,
+    id?: number,
     nome: string,
     email: string,
     idade: number,
