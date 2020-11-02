@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserSettings } from '../data/user-settings';
+import { AtributosUsuario } from '../data/atributos-usuario';
 
 @Component({
   selector: 'app-user-subscribe-form',
@@ -9,7 +9,7 @@ import { UserSettings } from '../data/user-settings';
 
 export class UserSettingsFormComponent implements OnInit {
 
-  originalUserSettings: UserSettings = {
+  atributosUsuarioOriginal: AtributosUsuario = {
     id: null,
     nome: null,
     email: null,
@@ -21,7 +21,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   public pageTitle = 'Cadastro';
 
-  userSettings: UserSettings = { ...this.originalUserSettings };
+  atributosUsuario: AtributosUsuario = { ...this.atributosUsuarioOriginal };
 
   constructor() { }
 

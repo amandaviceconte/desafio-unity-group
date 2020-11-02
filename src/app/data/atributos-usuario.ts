@@ -1,4 +1,4 @@
-export interface UserSettings {
+export interface AtributosUsuario {
     id: number,
     nome: string,
     email: string,
