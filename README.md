@@ -8,7 +8,7 @@ Use o comando `ng serve` para rodar o servidor. A rota é `http://localhost:4200
 
 Também é necessário rodar o [jsonapi-mock](https://www.npmjs.com/package/jsonapi-mock) para poder consumir a API.
 
-Para poder rodar o jsonapi-mock, rode o comando `json-server usuariosDB.json --watch` no diretório da aplicação.
+Para poder rodar o jsonapi-mock, utilize o comando `json-server usuariosDB.json --watch` no diretório da aplicação.
 
 ## Sobre a API
 
