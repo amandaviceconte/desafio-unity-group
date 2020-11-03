@@ -3,38 +3,29 @@
     {
       "nome": "Amanda",
       "email": "amanda.viceconte@gmail.com",
-      "idade": 26,
+      "idade": "26",
       "login": "amanda",
-      "senha": "abc",
-      "status": "ativo",
+      "senha": "123",
+      "status": "Ativo",
       "id": 1
     },
     {
-      "nome": "Teste",
-      "email": "teste@gmail.com",
-      "idade": 24,
-      "login": "teste",
-      "senha": "def",
-      "status": "ativo",
+      "nome": "João",
+      "email": "joao@gmail.com",
+      "idade": "25",
+      "login": "joao",
+      "senha": "123",
+      "status": "Inativo",
       "id": 2
     },
     {
-      "nome": "Teste",
-      "email": "teste@teste.com",
-      "idade": "35",
-      "login": "teste",
-      "senha": "123456",
+      "nome": "Ana",
+      "email": "ana@gmail.com",
+      "idade": "45",
+      "login": "ana",
+      "senha": "123",
       "status": "Ativo",
       "id": 3
-    },
-    {
-      "nome": "Teste",
-      "email": "teste@teste.com",
-      "idade": "35",
-      "login": "teste",
-      "senha": "123456",
-      "status": "Ativo",
-      "id": 4
     }
   ]
 }

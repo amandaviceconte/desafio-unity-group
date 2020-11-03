@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AtributosUsuario } from '../data/atributos-usuario';
-import { AdminNodeProvider } from '../api/user.service';
+import { UsuarioService } from '../api/usuario.service';
 
 @Component({
   selector: 'app-user-list-form',
   templateUrl: './user-list-form.component.html',
-  styleUrls: ['./user-list-form.component.css']
+  styleUrls: ['./user-list-form.component.scss']
 })
 
 export class UserListFormComponent implements OnInit {
@@ -14,7 +14,7 @@ export class UserListFormComponent implements OnInit {
   atributosUsuario: Array<AtributosUsuario>;
 
   constructor(
-    private adminNodeProvider: AdminNodeProvider
+    private usuarioService: UsuarioService
   ) { }
 
   ngOnInit(): void {
@@ -23,10 +23,22 @@ export class UserListFormComponent implements OnInit {
   }
 
   listarUsuarios() {
-    this.adminNodeProvider.listarUsuarios().subscribe(res => {
+    this.usuarioService.listarUsuarios().subscribe(res => {
       this.atributosUsuario = res;
     }), (err) => {
-      console.log('ERRO ao listar usuários: ', err);
+      console.log('ERRO ao listar usuários.', err);
     }
+  }
+
+  searchText(dataSearch) {
+    this.usuarioService.buscarUsuarioNome(dataSearch).subscribe(res => {
+      if (res.length <= 0) {
+        this.listarUsuarios();
+      } else {
+        this.atributosUsuario = res;
+      }
+    }), (err) => {
+      console.log('ERRO ao buscar um usuário.', err);
+    };
   }
 }

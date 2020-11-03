@@ -3,3 +3,9 @@
     margin-left: 30px;
     margin-right: 30px;
 }
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 80px 5px 30px;
+}

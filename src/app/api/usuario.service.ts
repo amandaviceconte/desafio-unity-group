@@ -4,8 +4,10 @@ import { Observable } from 'rxjs';
 
 import { AtributosUsuario } from '../data/atributos-usuario';
 
-@Injectable()
-export class AdminNodeProvider {
+@Injectable({
+  providedIn: 'root'
+})
+export class UsuarioService {
 
   urlLocal: string = 'http://localhost:3000';
 
@@ -15,11 +17,12 @@ export class AdminNodeProvider {
     return this.http.get(`${this.urlLocal}/usuarios`);
   }
 
-  buscarUsuarioId(id: any): Observable<any> {
-    return this.http.get(`${this.urlLocal}/usuarios/id/${id}`);
+  buscarUsuarioNome(nome: any): Observable<any> {
+    return this.http.get(`${this.urlLocal}/usuarios?nome=${nome}`);
   }
 
   adicionarUsuario(usuario: AtributosUsuario): Observable<AtributosUsuario> {
     return this.http.post<AtributosUsuario>(`${this.urlLocal}/usuarios`, usuario);
   }
+
 }
