@@ -1,0 +1,31 @@
+{
+  "usuarios": [
+    {
+      "nome": "Amanda",
+      "email": "amanda.viceconte@gmail.com",
+      "idade": "26",
+      "login": "amanda",
+      "senha": "123",
+      "status": "Ativo",
+      "id": 1
+    },
+    {
+      "nome": "João",
+      "email": "joao@gmail.com",
+      "idade": "25",
+      "login": "joao",
+      "senha": "123",
+      "status": "Inativo",
+      "id": 2
+    },
+    {
+      "nome": "Ana",
+      "email": "ana@gmail.com",
+      "idade": "45",
+      "login": "ana",
+      "senha": "123",
+      "status": "Ativo",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+<div class="container">
+  <h2>Cadastro</h2>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" class="form-control" required [(ngModel)]="atributosUsuario.nome" required
+        #nameField="ngModel" [class.field-error]="form.submitted && nameField.invalid" />
+      <div [hidden]="!form.submitted || nameField.valid" class="alert alert-danger">
+        Insira o nome
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" name="email" class="form-control" required [(ngModel)]="atributosUsuario.email" required
+        #emailField="ngModel" [class.field-error]="form.submitted && emailField.invalid">
+      <div [hidden]="!form.submitted || emailField.valid" class="alert alert-danger">
+        Insira o email
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input id="idade" name="idade" class="form-control" required [(ngModel)]="atributosUsuario.idade" required
+        #idadeField="ngModel" [class.field-error]="form.submitted && idadeField.invalid">
+      <div [hidden]="!form.submitted || idadeField.valid" class="alert alert-danger">
+        Insira a idade
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="login">Login</label>
+      <input id="login" name="login" class="form-control" required [(ngModel)]="atributosUsuario.login" required
+        #loginField="ngModel" [class.field-error]="form.submitted && loginField.invalid">
+      <div [hidden]="!form.submitted || loginField.valid" class="alert alert-danger">
+        Insira o login
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="senha">Password</label>
+      <input autocomplete="new-password" type="password" name="senha" class="form-control" required id="senha"
+        [(ngModel)]="atributosUsuario.senha" required #senhaField="ngModel"
+        [class.field-error]="form.submitted && senhaField.invalid">
+      <div [hidden]="!form.submitted || senhaField.valid" class="alert alert-danger">
+        Insira a senha
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select class="form-control" id="status" name="status" required [(ngModel)]="atributosUsuario.status" required
+        #statusField="ngModel" [class.field-error]="form.submitted && statusField.invalid">
+        <option>Ativo</option>
+        <option>Inativo</option>
+      </select>
+      <div [hidden]="!form.submitted || statusField.valid" class="alert alert-danger">
+        Insira o status
+      </div>
+    </div>
+
+    <button class="btn btn-primary" data-toggle="popover" title="Preenchimento incompleto ou incorreto"
+      data-content="Nome é obrigatório">Enviar</button>
+  </form>
+
+</div>
